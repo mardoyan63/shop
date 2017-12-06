@@ -6,6 +6,7 @@ import { ViewController, Slides } from "ionic-angular";
     templateUrl: "framecardone.html"
 })
 export class CardOne{   
+    str:string="Name";
     @ViewChild(Slides) slides: Slides;
     constructor(public viewCtrl: ViewController){}
     @Input() data;
