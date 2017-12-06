@@ -1,0 +1,49 @@
+frame-page{
+    .header .toolbar:last-child .toolbar-background{
+    border: none;
+    background-color: #2fc8ff;
+}
+.toolbar-title{
+    color: white;
+    text-align: center;
+}
+    .mybuttons{
+        ion-row{
+            ion-col{
+                display: flex;
+                .btt{
+                    margin: auto;
+                    width: 80px;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+    ion-content{
+        .start{
+            .startwork{
+                 background-repeat: no-repeat;
+                background-size: contain;
+                height: 70px;
+                width: 70px;
+                display: inline-block;
+                background-image: url("./../assets/vopros.png")
+        }
+            .pushing{
+                font-size: 1.5em;
+                    display: inline-block;
+            }
+        }
+        
+        .desccard{
+            .desc{
+                margin: 0;
+                white-space: pre-wrap;
+            }
+        }
+        .photos{
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            
+        }
+    }
+}

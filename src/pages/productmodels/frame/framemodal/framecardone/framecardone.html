@@ -1,0 +1,29 @@
+<div class="myCard">
+    <ion-card mode="md">
+  <ion-card-content>
+      <div class="cardactiv" (tap)="showcard()">
+           <div class="orderphoto" [ngStyle]="{'background-image':'url(' + data.photo + ')'}"></div>
+      <div class="labels">
+          <ion-label class="name">{{data.name}}</ion-label>
+          <ion-label class="anyinfo">Photos in frame: {{data.photocount}}</ion-label>
+          <ion-label class="anyinfo">Price:${{data.price}} <ion-label class="del">+${{data.delivery}}delivery</ion-label></ion-label>
+        </div>              
+      </div>
+     
+               
+           
+     <button (tap)="buy()" mode="ios"  class="edit" ion-button>Buy</button>
+  </ion-card-content>
+
+</ion-card>
+<ion-card mode="md" *ngIf="data.B" class="myCard2">
+    <ion-card-content>
+        <button (tap)="back()" class="leftbtt" ion-button><ion-icon name="md-arrow-dropleft-circle"></ion-icon></button>
+        <button (tap)="next()" class="rightbtt" ion-button><ion-icon name="md-arrow-dropright-circle"></ion-icon></button>
+       <ion-slides>
+  <ion-slide *ngFor="let photo of data.photos" [ngStyle]="{'background-image':'url(' + photo + ')'}">
+  </ion-slide>
+</ion-slides>
+    </ion-card-content>
+</ion-card>
+</div>

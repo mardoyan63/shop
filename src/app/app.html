@@ -1,0 +1,25 @@
+<ion-menu type="overlay" [content]="content">
+  <ion-header mode="ios">
+    <ion-toolbar mode="ios">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+   <div class="myheader">
+    <div class="photo"></div>
+    <ion-label class="name">{{this.ls.getIt('username')}}</ion-label>
+    <ion-label class="city" >{{this.ls.getIt('city') || '(your city)'}}</ion-label>
+  </div>
+  <ion-list no-lines>
+    <button mode="ios" menuClose ion-item (tap)="openPage(p)" *ngFor="let p of pages">
+      <ion-icon item-start name="md-alert"></ion-icon>
+      <ion-label>{{p.title}}</ion-label>
+    </button>
+  </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

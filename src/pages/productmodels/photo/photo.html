@@ -1,0 +1,36 @@
+<ion-header mode="ios">
+    <ion-navbar mode="ios">
+        <ion-title>Photos</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="mycontent">
+        <div *ngFor="let photo of photos, let i=index" class="choose" [ngStyle]="{'background-image':'url(' + photo + ')'}">
+        <button (tap)="delphoto(i)" mode="ios" class="close" ion-button><ion-icon name="md-close"></ion-icon></button>
+        </div>    
+    <button (tap)="getphoto()" class="add" ion-button><ion-icon name="md-add"></ion-icon></button>
+    </div>
+</ion-content>
+    <ion-footer mode="ios">
+        <ion-grid class="mybuttons">
+            <ion-row>
+                <ion-col>
+      <ion-select class="myselect" [(ngModel)]="size" okText="Okay" cancelText="Dismiss">
+        <ion-option value="10x10">10x10</ion-option>
+        <ion-option value="20x20">20x20</ion-option>
+        <ion-option value="30x30">30x30</ion-option>
+        <ion-option value="40x40">40x40</ion-option>
+        <ion-option value="50x50">50x50</ion-option>
+        <ion-option value="60x60">60x60</ion-option>
+      </ion-select>
+                </ion-col>
+                <ion-col>
+                    <input class="countinput" [(ngModel)]="count" type="number">
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col><button (tap)="buy()" class="btt" mode="ios" ion-button>Ok!</button></ion-col>
+                <ion-col><button (tap)="dismiss()" class="btt" mode="ios" ion-button>Close</button></ion-col>
+            </ion-row>
+        </ion-grid>
+</ion-footer>

@@ -1,0 +1,199 @@
+fmodal-page{
+    .button-md:hover:not(.disable-hover){
+                background-color: white; 
+            }
+    .header .toolbar:last-child .toolbar-background{
+    border: none;
+    background-color: #2fc8ff;
+}
+.toolbar-title{
+    color: white;
+    text-align: center;
+}
+    ion-header{
+        ion-toolbar{
+            .button{
+                float: right;
+                    height: 28px;
+                    background: none;
+                    box-shadow: none;
+                    padding: 0 0.5em;
+                    ion-icon{
+                        font-size: 2em;
+                    }
+            }
+                .button.activated{
+                    background: none;
+                    box-shadow: none;
+                }
+        }
+    }
+    ion-content{
+        .mysearchbar{
+            position: relative;
+            height: 67px;
+            .color{
+                height: 50%;
+                background-color: #2fc8ff;
+            }
+            .nocolor{
+                height: 50%;
+            }
+                     .searchbar{
+                         position: absolute;
+             padding:8px;
+    border: none;
+    background: none;
+    .searchbar-input{
+        height: 5rem;
+        border-radius: 100px;
+        box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
+    }
+    .searchbar-search-icon{
+        margin-top: auto;
+        margin-bottom: auto;
+        top: 0;
+        bottom: 0;
+    }
+}
+        }
+
+        .myheader{
+                text-align: center;
+    height: fit-content;
+    background: #2fc8ff;
+    position: relative;
+        .allitems{
+            background: white;
+            margin: 0 auto;
+            color: black;
+                height: 25px;
+                 margin-bottom: 3px;
+        }
+    .headerbody{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+                .btt{
+                background-color:   white;
+                margin: 5px;
+                height: 35px;
+                width: 80px;
+                padding: 2px;;
+                ion-label{
+                    color: black;
+                    text-transform: none;
+                    margin: 0;
+                    font-size: 0.8em;
+                    text-align: center;
+                }
+            }
+    }
+
+
+
+}
+.myCard{
+      ion-card{
+          margin-bottom: 0;
+        ion-card-content{
+            padding: 10px;
+            position: relative;
+            display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+            .cardactiv{
+                height: 100%;
+                width: 100%;
+                display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+            .orderphoto{
+                background-position: center;
+                background-size: cover;  
+                height: 70px;
+                width: 70px;
+                display: inline-block;
+            }
+            .labels{
+                display: inline-block;
+                margin-left: 16px;
+                width: 50%;
+                .name{
+                    margin: 0;
+                    font-size: 1.4em;
+                }
+                .anyinfo{
+                    margin: 0;
+                    .del{
+                        display: inline;
+                        margin: 0;
+                        font-size: 0.6em;
+                            font-weight: bold;
+                    }
+                }
+                
+            }
+
+                
+            .price{
+                margin: 0;
+                display: inline-block;
+                text-align: right;
+                font-size: 1.2em;
+                position: absolute;
+                right: 1rem;
+                bottom: 2em;
+                width: 100%;
+            }
+            }
+
+                
+            .edit{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: #2fc8ff; 
+                    height: 1.8em;
+                    z-index: 100;
+            }
+            .edit.activated{
+                background: #2fc8ff;    
+            }           
+      }
+    }
+        .myCard2{
+        ion-card-content{
+                position: relative;
+             .leftbtt{
+              position: absolute;
+              margin-bottom: auto;
+              margin-top: auto;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 100;
+            }
+            .rightbtt{
+              position: absolute;
+              margin-bottom: auto;
+              margin-top: auto;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              z-index: 100;
+            }
+             ion-slides{
+              height: 220px;
+              ion-slide{
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  background-position: center;
+              }
+          }
+        }
+    }
+    }
+
+    }
+}

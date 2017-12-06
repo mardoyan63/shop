@@ -1,0 +1,35 @@
+<ion-header mode="ios">
+    <ion-navbar mode="ios">
+        <ion-title>Frames</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card mode="md" *ngIf="!obj" class="start" (tap)="openBasicModal()">
+  <ion-card-content>
+      <div class="startwork"></div>
+          <ion-label class="pushing">Choose the photo!</ion-label>
+  </ion-card-content>
+
+</ion-card>
+<card-two *ngIf="obj" [framedata]="obj" (function1)="openBasicModal()"></card-two>
+<ion-card mode="ios" class="desccard">
+    <ion-card-content>
+        <ion-label class="desc">Define description: an act of describing; specifically : discourse intended to give a mental image of something… — description in a sentence.</ion-label>
+    </ion-card-content>
+</ion-card>
+<div class="photos">
+    <button ion-button><ion-icon name="md-add"></ion-icon></button>
+    <button ion-button><ion-icon name="md-add"></ion-icon></button>
+    <button ion-button><ion-icon name="md-add"></ion-icon></button>
+    <button ion-button><ion-icon name="md-add"></ion-icon></button>
+</div>
+<button ion-button><ion-icon name="md-add"></ion-icon></button>
+</ion-content>
+<ion-footer mode="ios">
+     <ion-grid class="mybuttons">
+            <ion-row>
+                <ion-col><button (tap)="buy()" class="btt" mode="ios" ion-button>Ok!</button></ion-col>
+                <ion-col><button (tap)="dismiss()" class="btt" mode="ios" ion-button>Close</button></ion-col>
+            </ion-row>
+        </ion-grid>
+</ion-footer>

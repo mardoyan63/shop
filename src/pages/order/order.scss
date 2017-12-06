@@ -1,0 +1,127 @@
+order-page{
+    .header .toolbar:last-child .toolbar-background{
+    border: none;
+    background-color: #2fc8ff;
+}
+.bar-button-default, .bar-button-default.bar-button-default, .bar-button-clear-default{
+    color: white;
+}
+.toolbar-title{
+    color: white;
+    text-align: center;
+}
+.bar-buttons[right]{
+    display: block! important;
+     background-image: url("./../assets/profile.jpg");
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ion-content{
+    .scroll-content{
+        overflow: hidden;
+    }
+    .result{
+        &.item{
+            padding: 0;
+            .item-inner{
+            padding: 0;
+        }
+        }
+    .prices{
+        text-align: right;
+        width: fit-content;
+    }
+    .orders{
+        text-align: left;
+        font-size: 11px;
+        margin: 11px 8px 11px 8px;
+    }
+    .button{
+        background-color: green;
+    }
+    }
+    ion-card{
+         .card-content{
+            padding: 10px 0px 10px 10px;
+        }
+        ion-card-content{
+            position: relative;
+            display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+            .orderphoto{
+                background: black;
+                height: 70px;
+                width: 70px;
+                display: inline-block;
+            }
+            .orderphoto-many{
+                box-shadow: 7px 7px 0px rgba(0,0,0,1);
+                background: black;
+                height: 70px;
+                width: 70px;
+                display: inline-block;
+            }
+            .labels{
+                display: inline-block;
+                margin-left: 16px;
+                width: 50%;
+                .name{
+                    margin: 0;
+                    font-size: 1.4em;
+                }
+                .size{
+                    margin: 0;
+                }
+                .each{
+                    margin: 0;
+                }
+            }
+
+                    .close{
+                position: absolute;
+                margin: 5px;
+                padding: 0;
+                right: 0;
+                top:0;
+                background: none;
+                box-shadow: none;
+                height: 16px;
+                ion-icon{
+                    color: black;
+                    font-size: 25px;
+                }
+            }
+            .close.activated{
+                background: none;
+            }
+            .price{
+                margin: 0;
+                display: inline-block;
+                text-align: right;
+                font-size: 1.2em;
+                position: absolute;
+                right: 1rem;
+                bottom: 2em;
+                width: 100%;
+            }
+                
+            .edit{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: #2fc8ff; 
+                    height: 1.8em;
+            }
+            .edit.activated{
+                background: #2fc8ff;    
+            }
+
+    }
+    }
+}
+}

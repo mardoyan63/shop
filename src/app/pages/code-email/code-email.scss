@@ -1,0 +1,48 @@
+c-email{
+    ion-content{
+        .backbtt{
+        color: #2fc8ff;
+        background: none;
+        box-shadow: none;
+        ion-icon{
+            font-size: 2.5em;
+        }
+    }
+        ion-grid{
+            height: 100%;
+            ion-row{
+                height: 100%;
+                ion-col{
+                    display: flex;
+                    .myinp1{
+                        margin: auto;
+                        text-align: center;
+                        height: 40px;
+                        width: 30%;
+                        font-size: 1.2em;
+                        border: none;
+                        border-bottom: 1px solid rgba(0,0,0,0.2);
+                    }
+                    .myinp1:focus{
+                        border-bottom: 2px solid #2fc8ff; 
+                    }
+                    .btt{
+                        margin: auto;
+                    }
+                    .activetext{
+                        margin: 0 auto;
+                     color: #0398ca;
+                    font-size: 12px;
+                    border-bottom: 1px solid #0398ca;
+                        height: fit-content;
+                        white-space: nowrap;
+                }
+                .activetext.activated{
+                    color:#d1d4db;
+                    border-color: #d1d4db;
+                }
+                }
+            }
+        }
+    }
+}

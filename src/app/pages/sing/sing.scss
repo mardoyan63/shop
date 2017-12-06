@@ -1,0 +1,39 @@
+sing-page{
+    ion-content{
+        .scroll-content{
+            overflow: hidden;
+        }
+        ion-grid{
+            height: 100%;
+            ion-row{
+                    
+                ion-col{
+                    display: flex;
+                    .app-name{
+                        font-size: 3em;
+                    }
+                    .upbtt{
+                        margin:auto;
+                        width: 70%;
+                        background-color: #2fc8ff;
+                    }
+                    .inbtt{
+                        margin: auto;
+                        width: 70%;
+                        background-color: white;
+                        color: #2fc8ff;
+                        border: 2px solid #2fc8ff;
+                    }
+                    .upbtt.activated{
+                        
+                        background-color: #2fc8ff;
+                        
+                    }
+                    .inbtt.activated{
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}

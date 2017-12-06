@@ -1,0 +1,34 @@
+model-page1{
+   .header .toolbar-background, .footer .toolbar-background{
+       border: none;
+       background-color: white;
+   }
+    .backbtt{
+        color: #2fc8ff;
+        background: none;
+        box-shadow: none;
+        ion-icon{
+            font-size: 2.5em;
+        }
+    }
+    .backbtt.activated{
+        background: none;
+        box-shadow: none;
+    }
+    ion-content{
+        ion-grid{
+            ion-row{
+                ion-col{
+                    display: flex;
+                    .button{
+                        margin: 0 auto;
+                        background-color: #2fc8ff;
+                    }
+                    .button.activated{
+                        background-color: #2fc8ff;
+                    }
+                }
+            }
+        }
+    }
+}

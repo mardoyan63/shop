@@ -1,0 +1,14 @@
+<ion-content>
+    <button (tap)="back()" class="backbtt" ion-button><ion-icon name="md-arrow-back"></ion-icon></button>
+    <ion-grid>
+        <ion-row>
+            <ion-col><input [(ngModel)]="code" [textMask]="{mask: mask, placeholderChar:'•'}" class="myinp1" type="text" placeholder="Code"></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col><a (tap)="back()" class="activetext">Vislat zanovo</a></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col><button (tap)="setcode()" class="btt" round ion-button>Code</button></ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

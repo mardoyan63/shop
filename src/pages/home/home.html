@@ -1,0 +1,22 @@
+<ion-header mode="ios">
+  <ion-navbar mode="ios">
+    <ion-title>Home</ion-title>
+    <button class="profbtt" ion-button right menuToggle></button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="myheader">
+    <ion-searchbar placeholder="Search" (ionInput)="filterItems($event)"></ion-searchbar>
+  </div>
+  <div class="mycards">
+  <div class="myCard" *ngFor="let item of items">
+    <div class="cardname">
+      <ion-label>
+          {{item}}
+      </ion-label>
+    </div>
+     
+  </div>
+    </div>
+</ion-content>

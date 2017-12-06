@@ -1,0 +1,46 @@
+<ion-content >
+
+<div class="logo">
+    <button (tap)="back()" class="backbtt" ion-button><ion-icon name="md-arrow-back"></ion-icon></button>
+</div>
+<div class="sing">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                    <input [(ngModel)]="name" class="myinp1" type="text" value="" placeholder="Name">
+                    <ion-icon item-right name="home"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <input [(ngModel)]="email" class="myinp2" type="text" value="" placeholder="Email">
+                    <ion-icon item-right name="home"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <div class="code">+(374)</div>
+                <input type="tel"  [(ngModel)]="tel" [textMask]="{mask: maskTel, placeholderChar:'*'}" class="myinp3" type="text" value="" placeholder="Telephone">
+                    <ion-icon item-right name="home"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <input [(ngModel)]="password" class="myinp4" type="password" value="" placeholder="Password">
+                    <ion-icon item-right name="home"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                    <button  mode="ios" (tap)="sing()" class="singup" ion-button round>{{"sing_up" | translate}}</button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                    <button (tap)="loginWithFB()" mode="ios" class="face" ion-button round></button>
+                    <button (tap)="loginGoogle()" mode="ios" class="google" ion-button round>Google</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>
+</ion-content>

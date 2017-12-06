@@ -1,0 +1,23 @@
+<ion-header no-lines mode="ios">
+
+  <ion-navbar mode='ios'>
+      <button class="backbtt" ion-button (click)="dismiss()"><ion-icon name="md-arrow-back"></ion-icon></button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-grid>
+  <ion-row>
+    <ion-col></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><button (tap)="email()" mode="ios" ion-button round>Email</button></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><button (tap)="tel()" mode="ios" ion-button round>Teliphone</button></ion-col>
+  </ion-row>
+</ion-grid>
+ 
+</ion-content>

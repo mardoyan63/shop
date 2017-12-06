@@ -1,0 +1,20 @@
+<ion-header mode="ios">
+  <ion-navbar mode="ios">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Edit Profile</ion-title>
+    <button mode="ios" class="apply" float-right ion-button>Apply</button>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="myheader">
+    <div class="photo"></div>
+  </div>
+  <ion-label class="username">{{this.ls.getIt('username')}}</ion-label>
+  <ion-label class="ded">Private Dedads</ion-label>
+  <div class="myitem">
+    <ion-label>Email number</ion-label>
+    <input class="myinp">
+  </div>
+</ion-content>

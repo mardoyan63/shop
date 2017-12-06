@@ -1,0 +1,132 @@
+reg-page{
+    ion-content{
+        .scroll-content{
+            overflow: hidden;
+            padding: 0 ! important;
+        }
+        .logo{
+            background-color: #2fc8ff;
+            height: 45%;
+            .backbtt{
+        color: white;
+        background: none;
+        box-shadow: none;
+        ion-icon{
+            font-size: 2.5em;
+        }
+    }
+        }
+        .sing{
+            background-color: white;
+            position: absolute;
+            width: 90%;
+            height: 65%;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        ion-grid{
+            ion-row{
+                ion-col{
+                    display: flex;
+                    .myinp1{
+                        margin: auto 0 auto auto;
+                        height: 40px;
+                        width: 95%;
+                        font-size: 1.2em;
+                        border: none;
+                        border-bottom: 1px solid rgba(0,0,0,0.2);
+                        padding: 0 38px 0 8px;
+                    }
+                    .myinp1:focus{
+                        border-bottom: 2px solid #2fc8ff; 
+                    }
+                    .myinp2{
+                        margin: auto 0 auto auto;
+                        height: 40px;
+                        width: 95%;
+                        font-size: 1.2em;
+                        border: none;
+                        border-bottom: 1px solid rgba(0,0,0,0.2);
+                        padding: 0 38px 0 8px;
+                    }
+                    .myinp2:focus{
+                        border-bottom: 2px solid #2fc8ff; 
+                    }
+                    .code{
+                        margin-left: 5%; 
+                        height: fit-content;
+                        position: absolute;
+                        font-size: 1.2em;
+                        margin-bottom: auto;
+                        margin-top: auto;
+                        top: 0;
+                        bottom: 3px;
+                    }
+                    .myinp3{
+                        margin: auto 0 auto auto;
+                        height: 40px;
+                        width: 95%;
+                        font-size: 1.2em;
+                        border: none;
+                        border-bottom: 1px solid rgba(0,0,0,0.2);
+                        padding: 0 38px 0 50px;
+                    }
+                    .myinp3:focus{
+                        border-bottom: 2px solid #2fc8ff; 
+                    }
+                    .myinp3::-webkit-input-placeholder { text-align:center; }
+                    .myinp4{
+                        margin: auto 0 auto auto;
+                        height: 40px;
+                        width: 95%;
+                        font-size: 1.2em;
+                        border: none;
+                        border-bottom: 1px solid rgba(0,0,0,0.2);
+                        padding: 0 38px 0 8px;
+                    }
+                    .myinp4:focus{
+                        border-bottom: 2px solid #2fc8ff; 
+                    }
+                    ion-icon{
+                        height: fit-content;
+                            opacity: 0.5;
+                            position: absolute;
+                            right: 13px;
+                            margin-top: auto;
+                            margin-bottom: auto;
+                            top: 0;
+                            bottom: 0;
+                            font-size: 2em;
+                        }
+                        ////////
+                    .singup{
+                        margin:auto;
+                        width: 70%;
+                        background-color: #2fc8ff;
+                    }
+                    .face{
+                        margin:auto;
+                        width: 30%;
+                        background-color: #2255be;
+                    }
+                    .google{
+                        margin:auto;
+                        width: 30%;
+                        background-color: red;
+                    }
+                    .singup.activated{
+                        background-color: #2fc8ff;
+                    }
+                    .face.activated{
+                        background-color: #2255be;
+                    }
+                }
+            }
+        }
+    }
+}

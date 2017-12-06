@@ -1,0 +1,32 @@
+<ion-header mode="ios">
+    <ion-navbar mode="ios">
+        <ion-title>Order</ion-title>
+        <button class="profbtt" ion-button right menuToggle></button>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-item class="result" mode="ios">
+        <ion-label class="orders">{{this.photoOrders}}</ion-label>
+        <ion-label class="prices">${{this.photoPrice}}</ion-label>
+        <button item-end ion-button><ion-icon name="md-checkmark"></ion-icon></button>
+    </ion-item>
+    <ion-card *ngFor="let order of photos; let i=index">
+  <ion-card-content>
+      <div [ngClass]="order.photos.length > 1 ? 'orderphoto-many' : 'orderphoto'" [ngStyle]="{'background-image':'url(' + order.photos[0] + ')'}"></div>
+      <div class="labels">
+          <ion-label class="name">{{order.name}}</ion-label>
+          <ion-label class="size">Size: {{order.size}}</ion-label>
+          <ion-label class="each">From each: {{order.count}}</ion-label>
+        </div>
+        <ion-label class="price">${{order.price}}</ion-label>
+
+                
+                <button (tap)="delorder(i)" mode="ios" class="close" ion-button><ion-icon name="md-close"></ion-icon></button>
+           
+            <button (tap)="openEditModelPhoto(i)"  class="edit" ion-button>Edit</button>
+       
+  </ion-card-content>
+
+</ion-card>
+</ion-content>
+<panel-tag (data)="getorder($event)"></panel-tag>

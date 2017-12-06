@@ -1,0 +1,71 @@
+photo-page{
+    .header .toolbar:last-child .toolbar-background{
+    border: none;
+    background-color: #2fc8ff;
+}
+.toolbar-title{
+    color: white;
+    text-align: center;
+}
+ion-content{
+    .mycontent{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .add{
+        height: 18vw;
+        width: 18vw;
+        display: inline-block;
+        margin: 1vw;
+        ion-icon{
+            font-size: 3em;
+        }
+    }
+    .choose{
+        height: 18vw;
+        width: 18vw;
+        background: blue;
+        display: inline-block;
+        margin: 1vw;
+       .close{
+        float: right;
+        height: 20%;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+        background: none;
+    }
+    }
+    
+}
+ion-footer{
+    .mybuttons{
+        ion-row{
+            ion-col{
+                display: flex;
+                .myselect{
+                    margin: auto;
+                    width: 70%;
+                    max-width: 100%;
+                        border: 1px solid rgba(0,0,0,0.3);
+                    font-size: 1.2em;
+                }
+                    .countinput{
+                        border: 1px solid rgba(0,0,0,0.3);
+                        margin: auto;
+                        text-align: center;
+                        height: 100%;
+                        width: 70%;
+                        font-size: 2em;
+                    }
+                .btt{
+                    margin: auto;
+                    width: 80px;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+}
+}

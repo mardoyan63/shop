@@ -1,0 +1,19 @@
+start-page{
+    ion-content{
+        .scroll-content{
+            overflow: hidden;
+        }
+        ion-slides{
+            height: 80%;
+        }
+        .bttdiv{
+            display: flex;
+            height: 20%;
+            .button{
+                margin: auto;
+                text-transform: none;
+                width: 30%;
+            }
+        }
+    }
+}

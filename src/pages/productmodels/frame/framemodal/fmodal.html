@@ -1,0 +1,38 @@
+<ion-header mode="ios">
+    <ion-toolbar mode="ios">
+        <ion-title>Frames</ion-title>
+        <button (tap)="dismiss()" class="btt" ion-button><ion-icon name="md-close"></ion-icon></button>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+     <div class="myheader">
+         <div class="headerbody">
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Christmas</ion-label></button></div>
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+         </div>
+            <button *ngIf="!openitems" (tap)="openitems=!openitems" mode="md" class="allitems" ion-button round >•••</button>
+            <div *ngIf="openitems" class="headerbody">
+                <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+            </div>
+    
+  </div>
+        <div class="mysearchbar">
+            <ion-searchbar placeholder="Search" (ionInput)="filterItems($event)"></ion-searchbar>
+            <div class="color"></div>
+            <div class="nocolor"></div>
+        </div>
+        
+<card-one 
+    *ngFor="let frame of frames; let i=index" 
+    [data]="frame" 
+    (show_details)="showcard(i)"
+    (select)="selectData(frame)"></card-one>
+</ion-content>

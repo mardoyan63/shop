@@ -1,0 +1,103 @@
+card-two{
+    .myCard{
+      ion-card{
+          margin-bottom: 0;
+        ion-card-content{
+            padding: 10px;
+            position: relative;
+            display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+            .cardactiv{
+                height: 100%;
+                width: 100%;
+                display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+            .orderphoto{
+                background-position: center;
+                background-size: cover;  
+                height: 70px;
+                width: 70px;
+                display: inline-block;
+            }
+            .labels{
+                display: inline-block;
+                margin-left: 16px;
+                width: 50%;
+                .name{
+                    margin: 0;
+                    font-size: 1.4em;
+                }
+                .anyinfo{
+                    margin: 0;
+                    .del{
+                        display: inline;
+                        margin: 0;
+                        font-size: 0.6em;
+                            font-weight: bold;
+                    }
+                }
+                
+            }
+
+                
+            .price{
+                margin: 0;
+                display: inline-block;
+                text-align: right;
+                font-size: 1.2em;
+                position: absolute;
+                right: 1rem;
+                bottom: 2em;
+                width: 100%;
+            }
+            }
+
+                
+            .edit{
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: #2fc8ff; 
+                    height: 1.8em;
+                    z-index: 100;
+            }
+            .edit.activated{
+                background: #2fc8ff;    
+            }           
+      }
+    }
+        .myCard2{
+        ion-card-content{
+                position: relative;
+             .leftbtt{
+              position: absolute;
+              margin-bottom: auto;
+              margin-top: auto;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 100;
+            }
+            .rightbtt{
+              position: absolute;
+              margin-bottom: auto;
+              margin-top: auto;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              z-index: 100;
+            }
+             ion-slides{
+              height: 220px;
+              ion-slide{
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  background-position: center;
+              }
+          }
+        }
+    }
+    }
+}
