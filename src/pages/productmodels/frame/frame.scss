@@ -43,7 +43,76 @@ frame-page{
         }
         .photos{
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-            
+            display: -webkit-box;
+            margin-bottom: 12px; 
+            position: relative;
+            .add{
+                height: 100%;
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .photoAdd{
+                    height: 26.5vw;
+                    width: 26.5vw;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+                    text-align: center;
+                .addBtt{
+                    padding: 0;
+                    width: 15vw;
+                    height: 15vw;
+                    margin: auto;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .index{
+                font-size: 4vw;
+                margin: 0;
+               height: fit-content;
+               margin: 2px;
+                text-align: center;
+            }
+            .size{
+                font-size: 4vw;
+                margin: 0;
+                height: fit-content;
+                margin: 2px;
+                text-align: center;
+            }
+                }
+            }
+            .count{
+                width: 20%;
+                display: flex;
+                .countCenter{
+                    width: fit-content;
+                    height: fit-content;
+                    margin: auto 0 auto 15%;
+                    ion-label{
+                        text-align: center;
+                        margin: 0;
+                        font-size: 2em;
+                    }
+                    .button{
+                        margin: 0;
+                        padding: 0;
+                        height: 1.5em;
+                        width: 1.5em;
+                        ion-icon{
+                            font-size: 2em;
+                        }
+                    }
+                }
+            }
+            .close{
+                position: absolute;
+                padding: 0;
+                margin: 2px;
+                top: 0;
+                right: 0;
+                height: 1em;
+                width: 1em;
+            }
         }
     }
 }

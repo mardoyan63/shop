@@ -2,12 +2,12 @@ import { Component, ViewChild } from "@angular/core";
 import { ViewController } from "ionic-angular";
 import { Slides } from 'ionic-angular';
 const  FRAMES=[
-    {name:"Christmas", photocount: '3', price: 1000, delivery:5000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png"},
-    {name:"Christmas", photocount: '3', price: 2000, delivery:4000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png"},
-    {name:"Christmas", photocount: '3', price: 3000, delivery:3000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png"},
-    {name:"Frames", photocount: '3', price: 4000, delivery:2000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png"},
-    {name:"Frames", photocount: '3', price: 5000, delivery:1000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png"},
-    {name:"Frames", photocount: '3', price: 6000, delivery:8000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png"},
+    {name:"Christmas", photocount: 3, price: 1000, delivery:5000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png", photosize:["10x10", "20x20", "30x30"]},
+    {name:"Christmas", photocount: 1, price: 2000, delivery:4000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png", photosize:[]},
+    {name:"Christmas", photocount: 5, price: 3000, delivery:3000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png", photosize:[]},
+    {name:"Frames", photocount: 6, price: 4000, delivery:2000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png", photosize:[]},
+    {name:"Frames", photocount: 15, price: 5000, delivery:1000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png", photosize:[]},
+    {name:"Frames", photocount: 8, price: 6000, delivery:8000, photos:["assets/iconsmall.png","assets/1024.png","assets/1024x500.png"], B:false, photo:"assets/iconsmall.png", photosize:[]},
 ];
 @Component({
     selector: "fmodal-page",
@@ -49,9 +49,9 @@ filterItems(ev:any){
     }
 }
 selectData(frame){
-    this.viewCtrl.dismiss(frame);
             for(let i=0; i<this.frames.length; i++){
                 this.frames[i].B=false
             }
+            this.viewCtrl.dismiss(frame);
 }
 }

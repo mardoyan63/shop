@@ -9,6 +9,7 @@ import { ImagePicker, ImagePickerOptions } from '@ionic-native/image-picker';
     providers:[ ImagePicker]
 })
 export class Photo{
+    photos:Array<string>;
     index:string='';
     size:string;
     count:number;
@@ -19,13 +20,14 @@ export class Photo{
         private imagePicker: ImagePicker,
         public np:NavParams
 ){
-        this.size='30x30';
-        this.count=1;
-        this.photos=this.np.get("array");
+    }
+ngOnInit(){
+     this.size=this.np.get("size")|| '30x30';
+        this.count=this.np.get("count")|| 1;
+        this.photos=this.np.get("array")|| [];
         this.count=this.np.get("count") || 1;
         this.size=this.np.get("size") || "30x30";
-    }
-    photos=[];
+}
     dismiss() {
     this.viewCtrl.dismiss();
   }
@@ -40,10 +42,10 @@ export class Photo{
   }
     delphoto(i){
         this.photos.splice(i,1);
-
     }
+    
     buy(){
-        if(this.photos.length>0){
+        if(this.photos.length){
             switch(this.size){
             case '10x10': this.price=100;
             break;

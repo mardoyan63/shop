@@ -11,24 +11,38 @@
   </ion-card-content>
 
 </ion-card>
-<card-two *ngIf="obj" [framedata]="obj" (function1)="openBasicModal()"></card-two>
+<div *ngIf="obj">
+    <card-two [framedata]="obj" (function1)="openBasicModal()"></card-two>
 <ion-card mode="ios" class="desccard">
     <ion-card-content>
         <ion-label class="desc">Define description: an act of describing; specifically : discourse intended to give a mental image of something… — description in a sentence.</ion-label>
     </ion-card-content>
 </ion-card>
-<div class="photos">
-    <button ion-button><ion-icon name="md-add"></ion-icon></button>
-    <button ion-button><ion-icon name="md-add"></ion-icon></button>
-    <button ion-button><ion-icon name="md-add"></ion-icon></button>
-    <button ion-button><ion-icon name="md-add"></ion-icon></button>
+<div *ngFor="let item of photos; let j=index" class="photos">
+    <div class="add">
+        <div *ngFor="let photo of item.photos; let k=index" class="photoAdd">
+            <ion-label class="index">{{k+1}}</ion-label>
+            <button class="addBtt" (tap)="getPhoto(j, k)" [ngStyle]="{'background-image':'url(' + photo + ')'}" ion-button><ion-icon *ngIf="photo=='assets/back.png'" name="md-add"></ion-icon></button>
+            <ion-label class="size">{{obj.photosize[k]}}</ion-label>
+        </div>
+        
+    </div>
+    <div class="count">
+        <div class="countCenter">
+            <button (tap)="countCreatePlus(j)" ion-button><ion-icon name="ios-arrow-up"></ion-icon></button>
+                <ion-label>{{item.count}}</ion-label>
+            <button (tap)="countCreateMinus(j)" ion-button><ion-icon name="ios-arrow-down"></ion-icon></button>
+        </div>
+    </div>
+    <button (tap)="closeItem(j)" class="close" ion-button><ion-icon name="md-close"></ion-icon></button>
 </div>
-<button ion-button><ion-icon name="md-add"></ion-icon></button>
+<button (tap)="newItem()" ion-button><ion-icon name="md-add"></ion-icon></button>
+</div>
 </ion-content>
 <ion-footer mode="ios">
      <ion-grid class="mybuttons">
             <ion-row>
-                <ion-col><button (tap)="buy()" class="btt" mode="ios" ion-button>Ok!</button></ion-col>
+                <ion-col><button *ngIf="photos.length>0" (tap)="buy()" class="btt" mode="ios" ion-button>Ok!</button></ion-col>
                 <ion-col><button (tap)="dismiss()" class="btt" mode="ios" ion-button>Close</button></ion-col>
             </ion-row>
         </ion-grid>

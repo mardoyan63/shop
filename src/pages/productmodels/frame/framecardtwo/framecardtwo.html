@@ -1,7 +1,7 @@
  <div class="myCard">
     <ion-card mode="md">
   <ion-card-content>
-      <div class="cardactiv" (tap)="B=!B">
+      <div class="cardactiv" (tap)="framedata.B=!framedata.B">
            <div class="orderphoto" [ngStyle]="{'background-image':'url(' + framedata.photo + ')'}"></div>
       <div class="labels">
           <ion-label class="name">{{framedata.name}}</ion-label>
@@ -16,7 +16,7 @@
   </ion-card-content>
 
 </ion-card>
-<ion-card mode="md" *ngIf="B" class="myCard2">
+<ion-card mode="md" *ngIf="framedata.B" class="myCard2">
     <ion-card-content>
         <button (tap)="back()" class="leftbtt" ion-button><ion-icon name="md-arrow-dropleft-circle"></ion-icon></button>
         <button (tap)="next()" class="rightbtt" ion-button><ion-icon name="md-arrow-dropright-circle"></ion-icon></button>

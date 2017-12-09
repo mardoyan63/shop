@@ -5,7 +5,7 @@
 </ion-header>
 <ion-content>
     <div class="mycontent">
-        <div *ngFor="let photo of photos, let i=index" class="choose" [ngStyle]="{'background-image':'url(' + photo + ')'}">
+        <div *ngFor="let photo of photos; let i=index" class="choose" [ngStyle]="{'background-image':'url(' + photo + ')'}">
         <button (tap)="delphoto(i)" mode="ios" class="close" ion-button><ion-icon name="md-close"></ion-icon></button>
         </div>    
     <button (tap)="getphoto()" class="add" ion-button><ion-icon name="md-add"></ion-icon></button>

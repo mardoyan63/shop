@@ -6,6 +6,7 @@ import { CardOne } from "../framemodal/framecardone/framecardone";
     templateUrl: "framecardtwo.html"
 })
 export class CardTwo extends CardOne{
+    B:boolean=false;
     @Input() framedata;
     @Output() function1=new EventEmitter();
     next(){
