@@ -33,7 +33,8 @@ ion-content{
         }
     .prices{
         text-align: right;
-        width: fit-content;
+        min-width: fit-content!important;
+        max-width: fit-content!important;
     }
     .orders{
         text-align: left;
@@ -54,14 +55,18 @@ ion-content{
         flex-wrap: wrap;
         flex-direction: row;
             .orderphoto{
-                background: black;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
                 height: 70px;
                 width: 70px;
                 display: inline-block;
             }
             .orderphoto-many{
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
                 box-shadow: 7px 7px 0px rgba(0,0,0,1);
-                background: black;
                 height: 70px;
                 width: 70px;
                 display: inline-block;

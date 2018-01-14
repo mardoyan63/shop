@@ -25,11 +25,15 @@
       </ion-select>
                 </ion-col>
                 <ion-col>
-                    <input class="countinput" [(ngModel)]="count" type="number">
+                    <div class="countinput">
+                        <button (tap)="countCreateMinus()" ion-button><ion-icon name="ios-arrow-back"></ion-icon></button>
+                        <ion-label>{{count}}</ion-label>
+                        <button (tap)="countCreatePlus()" ion-button><ion-icon name="ios-arrow-forward"></ion-icon></button>
+                    </div>
                 </ion-col>
             </ion-row>
             <ion-row>
-                <ion-col><button (tap)="buy()" class="btt" mode="ios" ion-button>Ok!</button></ion-col>
+                <ion-col><button [disabled]="photos.length>0 ? false : true" (tap)="buy()" class="btt" mode="ios" ion-button>Ok!</button></ion-col>
                 <ion-col><button (tap)="dismiss()" class="btt" mode="ios" ion-button>Close</button></ion-col>
             </ion-row>
         </ion-grid>

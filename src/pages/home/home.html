@@ -7,13 +7,13 @@
 
 <ion-content>
   <div class="myheader">
-    <ion-searchbar placeholder="Search" (ionInput)="filterItems($event)"></ion-searchbar>
   </div>
+  <search-tag (searching)="filterItems($event)"></search-tag>
   <div class="mycards">
-  <div class="myCard" *ngFor="let item of items">
+  <div (tap)="openOrders(item)" class="myCard" *ngFor="let item of modalPages">
     <div class="cardname">
       <ion-label>
-          {{item}}
+          {{item.title}}
       </ion-label>
     </div>
      

@@ -42,7 +42,7 @@
 <ion-footer mode="ios">
      <ion-grid class="mybuttons">
             <ion-row>
-                <ion-col><button *ngIf="photos.length>0" (tap)="buy()" class="btt" mode="ios" ion-button>Ok!</button></ion-col>
+                <ion-col><button [disabled]="photos.length>0 ? false : true" (tap)="buy()" class="btt" mode="ios" ion-button>Ok!</button></ion-col>
                 <ion-col><button (tap)="dismiss()" class="btt" mode="ios" ion-button>Close</button></ion-col>
             </ion-row>
         </ion-grid>

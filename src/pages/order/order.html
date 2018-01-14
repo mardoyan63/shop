@@ -6,8 +6,8 @@
 </ion-header>
 <ion-content>
     <ion-item class="result" mode="ios">
-        <ion-label class="orders">{{this.photoOrders}}</ion-label>
-        <ion-label class="prices">${{this.photoPrice}}</ion-label>
+        <ion-label class="orders">{{photoOrders}} {{frameOrders}}</ion-label>
+        <ion-label class="prices">${{allPrice}}</ion-label>
         <button item-end ion-button><ion-icon name="md-checkmark"></ion-icon></button>
     </ion-item>
     <ion-card *ngFor="let order of photos; let i=index">
@@ -21,12 +21,31 @@
         <ion-label class="price">${{order.price}}</ion-label>
 
                 
-                <button (tap)="delorder(i)" mode="ios" class="close" ion-button><ion-icon name="md-close"></ion-icon></button>
+                <button (tap)="delorder(order,i)" mode="ios" class="close" ion-button><ion-icon name="md-close"></ion-icon></button>
            
             <button (tap)="openEditModelPhoto(i)"  class="edit" ion-button>Edit</button>
        
   </ion-card-content>
 
 </ion-card>
+<!--////////////////////////////////////////////////////////////-->
+    <ion-card *ngFor="let order of frames; let i=index">
+  <ion-card-content>
+      <div [ngClass]="order.photos.length > 1 ? 'orderphoto-many' : 'orderphoto'" [ngStyle]="{'background-image':'url(' + order.obj.photo + ')'}"></div>
+      <div class="labels">
+          <ion-label class="name">{{order.obj.name}}</ion-label>
+          <ion-label class="size">Photo count: {{order.obj.photocount}}</ion-label>
+          <ion-label class="each">Frames: {{order.photos.length}} </ion-label>
+        </div>
+        <ion-label class="price">${{order.price}}</ion-label>
+
+                
+                <button (tap)="delorder(order,i)" mode="ios" class="close" ion-button><ion-icon name="md-close"></ion-icon></button>
+           
+            <button  (tap)="openEditModelFram(i)" class="edit" ion-button>Edit</button>
+       
+  </ion-card-content>
+
+</ion-card>
 </ion-content>
-<panel-tag (data)="getorder($event)"></panel-tag>
+<panel-tag [index]="panelIndex" (data)="getorder($event)"></panel-tag>

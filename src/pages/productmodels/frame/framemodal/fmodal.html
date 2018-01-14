@@ -7,12 +7,7 @@
 <ion-content>
      <div class="myheader">
          <div class="headerbody">
-              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Christmas</ion-label></button></div>
-              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
-              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
-              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
-              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
-              <div style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>Frame</ion-label></button></div>
+              <div (tap)="search(i)" *ngFor="let name of framNames; let i=index" style="margin: auto"><button class="btt" mode="md" ion-button round><ion-label>{{name}}</ion-label></button></div>
          </div>
             <button *ngIf="!openitems" (tap)="openitems=!openitems" mode="md" class="allitems" ion-button round >•••</button>
             <div *ngIf="openitems" class="headerbody">
@@ -24,11 +19,7 @@
             </div>
     
   </div>
-        <div class="mysearchbar">
-            <ion-searchbar placeholder="Search" (ionInput)="filterItems($event)"></ion-searchbar>
-            <div class="color"></div>
-            <div class="nocolor"></div>
-        </div>
+        <search-tag [value]="inputValue" (searching)="filterItems($event)"></search-tag>
         
 <card-one 
     *ngFor="let frame of frames; let i=index" 

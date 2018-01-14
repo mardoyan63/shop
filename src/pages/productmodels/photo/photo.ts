@@ -62,11 +62,16 @@ ngOnInit(){
              
         }
             this.price=this.price*this.photos.length*this.count;
-            this.viewCtrl.dismiss({name:"Photos", size:this.size, count:this.count, photos:this.photos, price:this.price});
+            this.viewCtrl.dismiss({type:"photo", name:"Photos", size:this.size, count:this.count, photos:this.photos, price:this.price});
              console.log("modal"+this.photos);
         }
-        else{
-            this.viewCtrl.dismiss();
-        }
     }
+    countCreatePlus(){
+        this.count++;
+}
+countCreateMinus(){
+    if(this.count!=1){
+        this.count--;
+    }
+}
 }

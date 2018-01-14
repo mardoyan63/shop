@@ -1,5 +1,5 @@
 import { Component, ViewChild } from "@angular/core";
-import { ViewController, ModalController, Slides, AlertController } from "ionic-angular";
+import { ViewController, ModalController, Slides, AlertController, NavParams } from "ionic-angular";
 import { Fmodal } from "./framemodal/fmodal";
 import { CardOne } from "./framemodal/framecardone/framecardone";
 import { ImagePicker, ImagePickerOptions } from "@ionic-native/image-picker";
@@ -14,20 +14,28 @@ const PHOTOS=[]
 export class Frame{
     options:ImagePickerOptions={maximumImagesCount: 1, width: 100, height:100, quality: 50};
     photos=PHOTOS;
-    photocount=0;
-    B:boolean=false;
+    //B:boolean=false;
     @ViewChild(Slides) slides: Slides;
     obj;
-constructor(public alertCtrl: AlertController, private imagePicker: ImagePicker, public vc:ViewController, public modalCtrl: ModalController){
-    this.openBasicModal();
-    
+constructor(public alertCtrl: AlertController, 
+    private imagePicker: ImagePicker, 
+    public vc:ViewController, 
+    public modalCtrl: ModalController,
+    public np:NavParams
+){
 }
-
+    ngOnInit(){
+        this.obj=this.np.get("obj")|| undefined;
+        this.photos=this.np.get("photos")|| [];
+        if(!this.np.get("obj")){
+            this.openBasicModal();
+        }
+    }
     dismiss(){
         this.vc.dismiss();
     }
     openBasicModal() {
-        this.B=false;
+        //this.B=false;
     let myModal = this.modalCtrl.create(Fmodal);
     myModal.present();
         myModal.onWillDismiss((data,rol)=>{
@@ -79,8 +87,14 @@ closeItem(j){
 buy(){
     for(let i=0; i<this.photos.length; i++){
         for(let j=0; j<this.photos[i].photos.length; j++){
-            if(this.photos[i].photos[j]!="assets/back.png"){
-                this.vc.dismiss();
+            if(this.photos[i].photos[j]!="assets/back.pn"){
+                let localPrice=0;
+                for(let i=0; i<this.photos.length; i++){
+                    localPrice+=this.obj.price*this.photos[i].count;
+                }
+                localPrice+=this.obj.delivery;
+                console.log("price"+localPrice);
+                this.vc.dismiss({obj:this.obj, photos: this.photos, price: localPrice});
                 return;
             }
             else{

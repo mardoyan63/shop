@@ -15,7 +15,6 @@ import { Facebook } from "@ionic-native/facebook"
 import { Start } from "./pages/start/start";
 import { Service } from "./services/service";
 import { Load } from "./pages/loading/loading";
-import { FormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
 import { RegModal } from "./pages/regmodal/regmodal";
 import { Cemail } from "./pages/code-email/code-email";
@@ -28,6 +27,20 @@ import { Frame } from "../pages/productmodels/frame/frame";
 import { Fmodal } from "../pages/productmodels/frame/framemodal/fmodal";
 import { CardOne } from "../pages/productmodels/frame/framemodal/framecardone/framecardone";
 import { CardTwo } from "../pages/productmodels/frame/framecardtwo/framecardtwo";
+import { Search } from "../pages/searchbar/search";
+import { GooglePlus } from "@ionic-native/google-plus";
+import {AngularFireModule} from "angularfire2";
+import firbase from "firebase";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+export const firebaseConfig={
+  apiKey: "AIzaSyDNt2hgmiwD0chLeyhKJvb2dJAOjByLI8w",
+    authDomain: "shope-b1faf.firebaseapp.com",
+    databaseURL: "https://shope-b1faf.firebaseio.com",
+    projectId: "shope-b1faf",
+    storageBucket: "shope-b1faf.appspot.com",
+    messagingSenderId: "1071245465432"
+}
+firbase.initializeApp(firebaseConfig)
 
 @NgModule({
   declarations: [
@@ -48,10 +61,13 @@ import { CardTwo } from "../pages/productmodels/frame/framecardtwo/framecardtwo"
     Frame,
     Fmodal,
     CardOne,
-    CardTwo
+    CardTwo,
+    Search
   ],
   imports: [
+    AngularFireModule.initializeApp(firebaseConfig),
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     TextMaskModule,
     IonicModule.forRoot(MyApp),
@@ -80,7 +96,8 @@ import { CardTwo } from "../pages/productmodels/frame/framecardtwo/framecardtwo"
     Photo,
     Frame,
     Fmodal,
-    CardOne
+    CardOne,
+    Search
   ],
   providers: [
     Facebook,
@@ -88,7 +105,8 @@ import { CardTwo } from "../pages/productmodels/frame/framecardtwo/framecardtwo"
     SplashScreen,
     LocalStorage,
     Service,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GooglePlus,
   ]
 })
 export class AppModule {}

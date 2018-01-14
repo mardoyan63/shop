@@ -12,7 +12,7 @@ export class Start{
     @ViewChild(Slides) slides: Slides;
     text:string='Done';
     done(){
-        if(this.slides._activeIndex>1){
+        if(this.slides.getActiveIndex()>1){
             this.navCtrl.setRoot(Sing);
             this.ls.setIt('start', 'start')
         }

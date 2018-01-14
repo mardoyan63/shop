@@ -44,6 +44,7 @@ ion-footer{
         ion-row{
             ion-col{
                 display: flex;
+                text-align: center;
                 .myselect{
                     margin: auto;
                     width: 70%;
@@ -52,12 +53,21 @@ ion-footer{
                     font-size: 1.2em;
                 }
                     .countinput{
-                        border: 1px solid rgba(0,0,0,0.3);
                         margin: auto;
-                        text-align: center;
-                        height: 100%;
-                        width: 70%;
-                        font-size: 2em;
+                        display: flex;
+                        align-items: center;
+                        .button{
+                            display: inline-block;
+                            margin: 0;
+                            ion-icon{
+                                font-size: 2em;
+                            }
+                        }
+                        ion-label{
+                            font-size: 2em;
+                            margin: 0;
+                            display: inline-block;
+                        }
                     }
                 .btt{
                     margin: auto;

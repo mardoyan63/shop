@@ -1,0 +1,30 @@
+search-tag{
+            .mysearchbar{
+            position: relative;
+            height: 67px;
+            .color{
+                height: 50%;
+                background-color: #2fc8ff;
+            }
+            .nocolor{
+                height: 50%;
+            }
+                     .searchbar{
+                         position: absolute;
+             padding:8px;
+    border: none;
+    background: none;
+    .searchbar-input{
+        height: 5rem;
+        border-radius: 100px;
+        box-shadow: 0 8px 6px -6px rgba(0,0,0,0.5);
+    }
+    .searchbar-search-icon{
+        margin-top: auto;
+        margin-bottom: auto;
+        top: 0;
+        bottom: 0;
+    }
+}
+        }
+}

@@ -92,8 +92,21 @@ reg-page{
                     .myinp4:focus{
                         border-bottom: 2px solid #2fc8ff; 
                     }
-                    ion-icon{
+                    .validIcon{
+                        color: green;
                         height: fit-content;
+                            opacity: 0.5;
+                            position: absolute;
+                            right: 13px;
+                            margin-top: auto;
+                            margin-bottom: auto;
+                            top: 0;
+                            bottom: 0;
+                            font-size: 2em;
+                        }
+                        .unvalidIcon{
+                            color: red;
+                            height: fit-content;
                             opacity: 0.5;
                             position: absolute;
                             right: 13px;
